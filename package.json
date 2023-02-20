@@ -1,0 +1,22 @@
+{
+  "name": "modern-farm",
+  "version": "1.0.0",
+  "description": "## Setup",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "babel-jest": "^25.3.0",
+    "jest": "^25.3.0"
+  },
+  "dependencies": {}
+}
+
