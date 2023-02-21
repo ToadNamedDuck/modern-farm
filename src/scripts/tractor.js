@@ -6,6 +6,11 @@ import { createSoybean } from './seeds/soybean.js';
 import { createSunflower } from './seeds/sunflower.js';
 import { createWheat } from './seeds/wheat.js';
 
+//tractor is the framework for using addPlant() from field.js, as well as utilizing the create[PLANT]() methods from the seed files.
+
+
+//It creates static variable objects, which are a representation of each type of seed. 
+
 const potatoSeed = createPotato();
 const wheatSeed = createWheat();
 const cornSeed = createCorn();
@@ -14,8 +19,8 @@ const soybeanSeed = createSoybean();
 const sunflowerSeed = createSunflower();
 
 
-export const plantSeeds = (plantingPlan) => {
-    for (const rows of plantingPlan) {
+export const plantSeeds = (plantingPlan) => {//This function accepts an array as an input, created by the randomized plan.
+    for (const rows of plantingPlan) {//We iterate through the plan, and match the current rows object to the correct seed type, and then we call addPlant with the correct seed.
         for (const seed of rows) {
             if(seed === "Potato"){
                 addPlant(potatoSeed);
